@@ -1,0 +1,36 @@
+.header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo img{
+    width:30%;
+}
+
+.menu{
+    margin-bottom: 0;
+
+}
+
+.nav_item a{
+    text-decoration: none;
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size:1.1 rem;
+}
+
+.nav_item a:hover{
+    color:inherit;
+}
+
+.nav_item a.active_link{
+    color: var(--secondary-color);
+}
+
+.mobile_menu{
+    font-size: 1.3 rem;
+    color: var(--heading-color);
+    display: none;
+}
+
