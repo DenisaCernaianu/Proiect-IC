@@ -11,7 +11,7 @@ const nav_links=[
     },
     {
         path:'/about',
-        dispaly:'About',
+        display:'About',
     },
     {
         path:'/tours',
@@ -19,7 +19,7 @@ const nav_links=[
     },
 
 
-]
+];
 const Header = () => {
     return <header className="header">
         <Container>
@@ -34,7 +34,9 @@ const Header = () => {
                     <ul className="menu d-flex align-items-center gap-5">{
                         nav_links.map((item,index)=>(
                             <li className="nav_item" key={index}>
-                                <NavLink to={item.path}>
+                                <NavLink to={item.path} className={navClass=> navClass.isActive ? "active_link" : ""
+                            }
+                            >
                                     {item.display}
                                 </NavLink>
                             </li>
