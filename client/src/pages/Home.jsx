@@ -8,6 +8,10 @@ import heroImg03 from '../assets/images/heroImg03.jpg'
 import worldImg from '../assets/images/world.png'
 import Subtitle from "../shared/Subtitle";
 
+import SearchBar from "../shared/SearchBar";
+import ServiceList from "../services/ServiceList";
+import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
+
 const Home = () => {
     return <>
 
@@ -43,10 +47,40 @@ const Home = () => {
                         <img src={heroImg03} alt=""/>
                     </div>
                 </Col>
+
+                <SearchBar/>
             </Row>
         </Container>
     </section>
      {/*hero section start*/}
+     <section>
+        <Container>
+            <Row>
+                <Col lg='3'>
+                    <h5 className="services_subtitle">What we offer</h5>
+                    <h2 className="services_title">We provide the best quality</h2>
+                </Col>
+                <ServiceList>
+
+                </ServiceList>
+            </Row>
+        </Container>
+     </section>
+
+     {/*=============== featured tour section start =================== */}
+     <section>
+        <Container>
+            <Row>
+                <Col lg='12' className="mb-5">
+                    <Subtitle subtitle={'Explore'}></Subtitle>
+                    <h2 className="featured_tour-title">Our featured tours</h2>
+                </Col>
+                <FeaturedTourList></FeaturedTourList>
+            </Row>
+        </Container>
+     </section>
+     {/*=============== featured tour section end =================== */}
+
     </>
 };
 
