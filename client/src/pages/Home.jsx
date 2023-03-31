@@ -81,6 +81,33 @@ const Home = () => {
      </section>
      {/*=============== featured tour section end =================== */}
 
+     {/*=============== experience section start =====================*/}
+     <section>
+        <Container>
+            <Row>
+                <Col lg='6'>
+                    <div className="experience_content">
+                        <Subtitle subtitle={'Experience'}></Subtitle>
+
+                        <h2>Let's dive right in</h2>
+                        <p>
+                            X-perience
+                        </p>
+                    </div>
+                    <div className="counter_wrapper d-flex align-items-center gap-5">
+
+                    </div>
+                </Col>
+                <Col lg='6'></Col>
+            </Row>
+        </Container>
+     </section>
+
+
+     {/*=============== experience section end =====================*/}
+
+    
+
     </>
 };
 
