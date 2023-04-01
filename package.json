@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-responsive-masonry": "^2.1.7",
+    "reactstrap": "^9.1.8"
+  }
+}
