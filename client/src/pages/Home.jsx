@@ -15,6 +15,7 @@ import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimoials";
+import Newsletter from "../shared/Newsletter";
 
 const Home = () => {
     return <>
@@ -30,9 +31,9 @@ const Home = () => {
                                 <img src={worldImg} alt="" />
                        </div>
                        <h1> Traveling opens the door to creating <span className="highlight">memories</span> </h1>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eius minima dolorum,
-                         itaque ipsam dicta fugit reiciendis in magnam accusamus deleniti consectetur? Itaque
-                          provident harum accusantium temporibus unde repellendus repellat.</p>
+                       <p>Let loose. When was the last time you went somewhere completely unplanned?
+                        If you don't like making plans, leave that to us. Our experts are here to guide you through the best places for a weekend getaway or a week-long trip to paradise.
+                       </p>
                     </div>
                 </Col>
 
@@ -158,6 +159,7 @@ const Home = () => {
         </Container>
       </section>
      {/*=============== testimonial section end   =====================*/}
+     <Newsletter/>
 
     
 
