@@ -10,22 +10,24 @@ const useFetch = (url) => {
     useEffect(()=>{
 
         const fetchData = async() =>{
-            setLoading(true)
+            setLoading(true);
 
             try {
                 const res = await fetch(url)
                 if(!res.ok){
                     setError('failed to fetch')
-                    alert('failed to fetch!')
+                    
                 }
                 const result = await res.json()
                 setData(result.data)
+                setLoading(false);
             } catch (err) {
                 setError(err.message)
                 setLoading(false)
                 
             }
         };
+
         fetchData();
 
     }, [url])
