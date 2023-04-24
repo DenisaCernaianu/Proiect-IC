@@ -18,7 +18,8 @@ const TourDetails = () => {
     const tour = tourData.find(tour=> tour.id === id)
 
     //destructure properties from tour objec
-    const {photo, title, desc, price, address , reviews, city, distance, maxGroupSize} = tour;
+   // const {photo}=undefined ||{};
+    const {photo,title, desc, price, address , reviews, city, distance, maxGroupSize} = tour;
 
     const {totalRating, avgRating} = calculateAvgRating(reviews)
     
