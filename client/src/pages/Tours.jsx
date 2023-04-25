@@ -3,7 +3,6 @@ import CommonSection from "../shared/CommonSection";
 import '../styles/tour.css';
 import TourCard from'./../shared/TourCard';
 import SearchBar from'./../shared/SearchBar';
-import Newsletter from'./../shared/Newsletter';
 import tourData from '../assets/data/tours';
 import { Container, Row, Col } from "reactstrap";
 
@@ -66,7 +65,7 @@ const Tours = () => {
         }
         </Container>
     </section>
-    <Newsletter/>
+    
     </>
     );
 };

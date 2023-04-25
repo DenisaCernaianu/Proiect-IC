@@ -6,7 +6,6 @@ import tourData from '../assets/data/tours';
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
-import Newsletter from "../shared/Newsletter";
 import useFetch from './../hooks/useFetch';
 import {BASE_URL} from './../utils/config'
 import { useEffect } from "react";
@@ -145,7 +144,7 @@ const TourDetails = () => {
        }
         </Container>
     </section>
-    <Newsletter/>
+    
     </>
 };
 
