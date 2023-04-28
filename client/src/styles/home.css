@@ -49,3 +49,31 @@
 .masonry_img:hover{
     transform: scale(1.1);
 }
+
+@media only screen and (max-width:992px){
+    .hero_content{
+        font-size: 2.7rem;
+    }
+
+    .featured_tour-title, .gallery_title{
+        font-size: 2rem;
+    }
+
+    
+
+}
+
+@media only screen and (max-width:576px){
+    .hero_content h1{
+        font-size: 1.8rem;
+    }
+
+    .featured_tour-title, .gallery_title{
+        font-size: 1.5rem;
+    }
+
+
+
+}
+
+
