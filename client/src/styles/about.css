@@ -1,0 +1,77 @@
+
+
+.hero_content h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+    object-fit: cover;
+}
+
+.hero_content h1 .highlight{
+    color: var(--secondary-color);
+}
+
+.hero_content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+   line-height: 2rem;
+}
+
+.hero_img-box img{
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+    object-fit: cover;
+}
+
+
+
+
+.counter_wrapper{
+    margin-top: 2.5rem;
+}
+
+.gallery_title{
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.masonry_img{
+    transition: .3s;
+}
+
+.masonry_img:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width:992px){
+    .hero_content{
+        font-size: 2.7rem;
+    }
+
+    .featured_tour-title, .gallery_title{
+        font-size: 2rem;
+    }
+
+    
+
+}
+
+@media only screen and (max-width:576px){
+    .hero_content h1{
+        font-size: 1.8rem;
+    }
+
+    .featured_tour-title, .gallery_title{
+        font-size: 1.5rem;
+    }
+
+
+
+}
+
+
