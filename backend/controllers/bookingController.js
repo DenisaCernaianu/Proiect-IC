@@ -32,6 +32,7 @@ export const getAllBooking = async(req, res) =>{
 
     try {
         const books = await Booking.find()
+        res.send(books)
 
         res.status(200).json({success:true, message:"successful", data:books})
     } catch (err) {

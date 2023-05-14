@@ -50,6 +50,14 @@
     transform: scale(1.1);
 }
 
+.admin-screen{
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+}
+
 @media only screen and (max-width:992px){
     .hero_content{
         font-size: 2.7rem;
