@@ -10,6 +10,7 @@ import SearchResultList from './../pages/SearchResultList'
 import ThankYou from '../pages/ThankYou'
 import AdminScreen from '../pages/AdminScreen'
 
+
 const Routers = () => {
     return (<Routes>
         <Route path='/' element={<Navigate to='/home'/>}/>

@@ -1,74 +1,132 @@
 import React, {useState, useEffect} from "react"; //6.9k (gzipped: 2.7k)
 import { Tabs } from "antd";
-import axios from "axios"
-import CommonSection from "../shared/CommonSection";
-import '../styles/tour.css';
-import TourCard from'./../shared/TourCard';
-import SearchBar from'./../shared/SearchBar';
-import tourData from '../assets/data/tours';
-import { Container, Row, Col } from "reactstrap";
 
-import useFetch from '../hooks/useFetch'
-import { BASE_URL } from "../utils/config";
+import '../styles/tour.css'
 import '../styles/home.css'
+
+import Users from "./Users";
+import ToursAdmin from "./ToursAdmin";
+import BookingsAdmin from "./BookingsAdmin";
 
 const {TabPane} = Tabs;
 
 const AdminScreen = () =>{
+
     return(
         <div className='admin-screen'>
             <h2 className="text-center"><b>Admin Panel</b></h2>
             <Tabs defaultActiveKey="1">
-                <TabPane tab = "Bookings" key="1"><Bookings/></TabPane>
-                <TabPane tab = "Tours" key="2"><Tours/></TabPane>
-                <TabPane tab = "Add tour" key="3"><h1>Add tour</h1></TabPane>
-                <TabPane tab = "Users" key="4"><h1>Users</h1></TabPane>
+             
+                
+                <TabPane tab = "Tours" key="1"><ToursAdmin/></TabPane>
+                <TabPane tab = "Users" key="2"><Users/></TabPane>
+                <TabPane tab = "Bookings" key="3"><h1>BookingsAdmin</h1></TabPane>
+                <TabPane tab = "Add Tour" key="4"><h1>Add Tour</h1></TabPane>
+               
             </Tabs>
         </div>
     );
 };
 export default AdminScreen;
 
-const Tours = () => {
 
-    const {data:tours, loading, error} = useFetch(`${BASE_URL}/tours`)
-    return(
-    <>
-    {
-        loading && <h4>loading...</h4>
-    }
-    {
-        error && <h4>{error}</h4>
-    }
-    {!loading 
-    && !error
-     &&
-    tours?.map(tour=> (
-            <Col lg= '3'  md = '6' sm = '6' className='mb-4' key={tour._id}>{tour.title}</Col>
-        ))
-    }
-    </>
-    );
-};
+/*
 
 const Bookings = () => {
-
-     const {data:bookings, loading, error} = useFetch(`${BASE_URL}/booking`)
-    return(
-    <>
-    {
-        loading && <h4>loading...</h4>
-    }
-    {
-        error && <h4>{error}</h4>
-    }
-    {!loading 
-    && !error
-     &&
-    bookings?.map(book=> (
-            <Col lg= '3'  md = '6' sm = '6' className='mb-4' key={book._id}>{book.tourName}</Col>
-        ))
-    }
-    </>
+    const [bookings, setBookings] = useState([]);
+  
+    useEffect(() => {
+      fetchData();
+    }, []);
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/api/v1/booking');
+        setBookings(response.data);
+      } catch (error) {
+        console.log('Error fetching bookings:', error);
+      }
+    };
+  
+    return (
+      <div>
+        <h1>Bookings</h1>
+        <ul>
+          {bookings.map((bookings) => (
+            <li key={bookings._id}>
+              {bookings.tourName},  {bookings.fullName}  
+            </li>
+          ))}
+        </ul>
+      </div>
     );
-};
+  };
+
+*/
+
+  
+ /* const Tours = () => {
+    const [tours, setTours] = useState([]);
+  
+    useEffect(() => {
+      fetchData();
+    }, []);
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/api/v1/tours');
+        setTours(response.data);
+      } catch (error) {
+        console.log('Error fetching tours:', error);
+      }
+    };
+  
+    return (
+      <div>
+        <h1>Tours</h1>
+        <ul>
+          {tours.map((tours) => (
+            <li key={tours._id}>
+              <h2>{tours.title}</h2>
+             
+              }
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+*/
+
+ /* const Users = () => {
+    const [users, setUsers] = useState([]);
+  
+    useEffect(() => {
+      fetchData();
+    }, []);
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/api/v1/users');
+        setUsers(response.data);
+      } catch (error) {
+        console.log('Error fetching users:', error);
+      }
+    };
+  
+    return (
+      <div>
+        <h1>Users</h1>
+        <ul>
+          {users.map((user) => (
+            <li key={user._id}>
+              <h2>{user.username}</h2>
+              <p>{user.email}</p>
+              {/* render other user details *//*
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };*/
+

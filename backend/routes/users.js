@@ -7,11 +7,15 @@ const router = express.Router()
 router.put("/:id",verifyUser, updateUser);
 
 // delete tour
+
 router.delete("/:id",verifyUser,deleteUser);
 
 // get single tour
 router.get("/:id", verifyUser, getSingleUser);
 
 // get all tours
-router.get("/",verifyAdmin, getAllUsers);
+
+//router.get("/",verifyAdmin, getAllUsers);
+router.get("/", getAllUsers);
+
 export default router

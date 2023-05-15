@@ -5,8 +5,9 @@ import { createBooking, getBooking, getAllBooking } from "../controllers/booking
 
 const router = express.Router()
 
-router.post('/', verifyUser, createBooking);
-router.get('/:id', verifyUser, getBooking);
-router.get('/', verifyAdmin, getAllBooking);
+router.post("/", verifyUser, createBooking);
+router.get("/:id", verifyUser, getBooking);
+//router.get('/', verifyAdmin, getAllBooking);
+router.get("/", getAllBooking);
 
 export default router;
