@@ -19,9 +19,9 @@ export const getBooking = async(req, res) =>{
     const id = req.params.id
 
     try {
-        const book = await Booking.findById(id)
+        const booking = await Booking.findById(id)
 
-        res.status(200).json({success:true, message:"successful", data:book})
+        res.status(200).json({success:true, message:"successful", data:booking})
     } catch (err) {
         res.status(404).json({success:true, message:"not found"})
     }
@@ -31,10 +31,10 @@ export const getBooking = async(req, res) =>{
 export const getAllBooking = async(req, res) =>{
 
     try {
-        const books = await Booking.find()
-        res.send(books)
+        const bookings = await Booking.find()
+        res.send(bookings)
 
-        res.status(200).json({success:true, message:"successful", data:books})
+        res.status(200).json({success:true, message:"successful", data:bookings})
     } catch (err) {
         res.status(500).json({success:true, message:"internal server error"})
     }

@@ -8,7 +8,7 @@ router.put("/:id",verifyUser, updateUser);
 
 // delete tour
 
-router.delete("/:id",verifyUser,deleteUser);
+router.delete("/:id",deleteUser);
 
 // get single tour
 router.get("/:id", verifyUser, getSingleUser);

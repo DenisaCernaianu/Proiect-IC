@@ -13,10 +13,11 @@ import { BASE_URL } from "../utils/config";
 
 import useFetch from '../hooks/useFetch'
 
+
   const BookingsAdmin = () => {
    
 
-   const {data:bookings, loading, error} = useFetch(`http://localhost:4000/api/v1/booking`)
+   const {data:bookings, loading, error} = useFetch(`${BASE_URL}/booking`)
     return(
     <>
     {
@@ -28,8 +29,8 @@ import useFetch from '../hooks/useFetch'
     {!loading 
     && !error
      &&
-    bookings?.map(books=> (
-            <Col lg= '3'  md = '6' sm = '6' className='mb-4' key={books._id}>{books.fullName}</Col>
+    bookings?.map(booking=> (
+            <Col lg= '3'  md = '6' sm = '6' className='mb-4' key={booking._id}>{booking.fullName}</Col>
         ))
     }
     </>

@@ -32,7 +32,7 @@ export const updateUser = async(req,res)=>{
     }
 };
 
-//delete tour
+//delete user
 export const deleteUser = async(req,res)=>{
     const id = req.params.id
     try {
@@ -75,3 +75,4 @@ export const getAllUsers = async(req,res)=>{
         res.status(404).json({success:false, message:'not found'});
     }
 };
+
