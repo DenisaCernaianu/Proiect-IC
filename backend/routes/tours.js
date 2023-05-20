@@ -10,7 +10,7 @@ router.post("/", verifyAdmin, createTour);
 router.put("/:id", verifyAdmin, updateTour);
 
 // delete tour
-router.delete("/:id", verifyAdmin, deleteTour);
+router.delete("/:id", deleteTour);
 
 // get single tour
 router.get("/:id",getSingleTour);

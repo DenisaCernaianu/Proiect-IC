@@ -7,11 +7,37 @@ import TourCard from'../shared/TourCard';
 import SearchBar from'../shared/SearchBar';
 import tourData from '../assets/data/tours';
 import { Container, Row, Col } from "reactstrap";
-
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { BASE_URL } from "../utils/config";
 
 import useFetch from '../hooks/useFetch'
+
+const headerStyle = {
+    background:   '#ff9900',
+    fontWeight: 'bold',
+    padding: '8px',
+  };
+
+  const cellStyle = {
+    border: '1px solid #ddd',
+    padding: '8px',
+    background:'#ffebcc'
+  };
+
+  const deleteTour = async (id) => {
+    alert("Delete tour?");
+    try {
+      const response = await axios.delete(`${BASE_URL}/tours/${id}`);
+      console.log(response.data); // Optional: log the response data
+      // Perform any necessary actions after successful deletion
+    } catch (error) {
+      console.error(error);
+      // Handle error if deletion fails
+    }
+  };
+
 const ToursAdmin = () => {
 
     const {data:tours, loading, error} = useFetch(`${BASE_URL}/tours`)
@@ -26,11 +52,21 @@ const ToursAdmin = () => {
     {!loading 
     && !error
      &&
-    tours?.map(tour=> (
-            <Col lg= '3'  md = '6' sm = '6' className='mb-4' key={tour._id}>
-             <table style={{width: 700}}> <tr>  <b>  Title:</b> {tour.title}    <b>  City:</b> {tour.city}  <b>  Address:</b> {tour.address}    <b>   Price:</b> {tour.price} </tr> </table> </Col> 
-        ))
-    }
+     <table style={{width: 700}}><thead>
+     <tr>  <th style={headerStyle}>  Title:</th>   <th style={headerStyle}>  City:</th>  <th style={headerStyle}>   Address:</th>  <th style={headerStyle}>Price:</th> <th style={headerStyle}>Delete:</th></tr> 
+     </thead>
+     <tbody>
+         {tours?.map(tour=> (
+     <tr key={tour._id}>
+     <td style={cellStyle}>{tour.title}</td>
+     <td style={cellStyle}>{tour.city}</td>
+     <td style={cellStyle}>{tour.address}</td>
+     <td style={cellStyle}>{tour.price}</td>
+     <td style={cellStyle}><FontAwesomeIcon icon={faTrash} onClick={()=>deleteTour(tour._id)}/></td>
+     </tr>))}
+         </tbody> </table> 
+
+         }
     </>
     );
 };
