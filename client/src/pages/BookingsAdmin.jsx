@@ -12,7 +12,17 @@ import { Container, Row, Col } from "reactstrap";
 import { BASE_URL } from "../utils/config";
 
 import useFetch from '../hooks/useFetch'
+const headerStyle = {
+  background: '#ff9900',
+  fontWeight: 'bold',
+  padding: '8px',
+};
 
+const cellStyle = {
+  border: '1px solid #ddd',
+  padding: '8px',
+  background: '#ffebcc',
+};
 
   const BookingsAdmin = () => {
    
@@ -29,40 +39,36 @@ import useFetch from '../hooks/useFetch'
     {!loading 
     && !error
      &&
-    bookings?.map(booking=> (
-            <Col lg= '3'  md = '6' sm = '6' className='mb-4' key={booking._id}>{booking.fullName}</Col>
-        ))
-    }
-    </>
-    );
+     (
+      <>
+        <table style={{ width: 700 }}>
+          <thead>
+            <tr>
+              <th style={headerStyle}>ID:</th>
+              <th style={headerStyle}>Name:</th>
+              <th style={headerStyle}>Contact Person:</th>
+              <th style={headerStyle}>Group Size:</th>
+              <th style={headerStyle}>Phone:</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bookings.map((bookings) => (
+              <tr key={bookings._id}>
+                <td style={cellStyle}>{bookings._id}</td>
+                <td style={cellStyle}>{bookings.tourName}</td>
+                <td style={cellStyle}>{bookings.fullName}</td>
+                <td style={cellStyle}>{bookings.guestSize}</td>
+                <td style={cellStyle}>{bookings.phone}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+    
+      </>
+    )}
+  </>
+    )
 };
-/*const [bookings, setBookings] = useState([]);
-  
-    useEffect(() => {
-      fetchData();
-    }, []);
-  
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/api/v1/booking');
-        setBookings(response.data);
-      } catch (error) {
-        console.log('Error fetching bookings:', error);
-      }
-    };
-  
-    return (
-      <div>
-        <h1>Bookings</h1>
-        <ul>
-          {bookings.map((bookings) => (
-            <li key={bookings._id}>
-              {bookings.tourName},  {bookings.fullName}  
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
-  */
+
   export default  BookingsAdmin;

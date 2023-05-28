@@ -4,10 +4,10 @@ import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
 // create new tour
-router.post("/", verifyAdmin, createTour);
+router.post("/", createTour);
 
 // update tour
-router.put("/:id", verifyAdmin, updateTour);
+router.put("/:id", updateTour);
 
 // delete tour
 router.delete("/:id", deleteTour);

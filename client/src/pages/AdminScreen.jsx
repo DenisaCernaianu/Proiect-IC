@@ -7,6 +7,7 @@ import '../styles/home.css'
 import Users from "./Users";
 import ToursAdmin from "./ToursAdmin";
 import BookingsAdmin from "./BookingsAdmin";
+import AddTourAdmin from "./AddTourAdmin";
 
 const {TabPane} = Tabs;
 
@@ -20,8 +21,8 @@ const AdminScreen = () =>{
                 
                 <TabPane tab = "Tours" key="1"><ToursAdmin/></TabPane>
                 <TabPane tab = "Users" key="2"><Users/></TabPane>
-                <TabPane tab = "Bookings" key="3"><h1>BookingsAdmin</h1></TabPane>
-                <TabPane tab = "Add Tour" key="4"><h1>Add Tour</h1></TabPane>
+                <TabPane tab = "Bookings" key="3"><BookingsAdmin/></TabPane>
+                <TabPane tab = "Add Tour" key="4"><AddTourAdmin/></TabPane>
                
             </Tabs>
         </div>
