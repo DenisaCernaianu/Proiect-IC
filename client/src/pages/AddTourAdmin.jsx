@@ -139,11 +139,11 @@ const createPost = async (newImage) =>{
         <div className="form-group">
           <label>Photo:</label>
           <input
-            type="text"
+            type="file"
             name="photo"
-            value={tourData.photo}
+           // value={tourData.photo}
             //accept=".jpeg, .png, .jpg"
-            onChange={handleChange}
+            onChange={handlePhotoChange}
             className="form-control"
           />
         </div>
