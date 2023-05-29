@@ -1,10 +1,12 @@
 import express from "express"
-import {updateUser, deleteUser, getSingleUser, getAllUsers} from "./../controllers/userController.js";
+import {updateUser, deleteUser, getSingleUser, getAllUsers, createUser} from "./../controllers/userController.js";
 import { verifyUser, verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router()
+
+router.post("/", createUser)
 // update tour
-router.put("/:id",verifyUser, updateUser);
+router.put("/:id", updateUser);
 
 // delete tour
 

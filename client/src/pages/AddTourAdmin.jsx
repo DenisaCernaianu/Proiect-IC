@@ -74,6 +74,7 @@ const createPost = async (newImage) =>{
     try {
       const response = await axios.post(`${BASE_URL}/tours`, tourData);
       console.log(response.data);
+      window.confirm("Inserted successfully");
       // Perform any necessary actions after successful tour addition
       // Reset the form data
       setTourData({

@@ -69,11 +69,25 @@ const Login = () => {
 
                         <Form onSubmit={handleClick}>
                             <FormGroup>
-                                <input type="email" placeholder="Email" required id="email" onChange={handleChange}></input>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                required
+                                id="email"
+                                onChange={handleChange}
+                                data-testid="email-input"
+                                ></input>
                             </FormGroup>
 
                             <FormGroup>
-                                <input type="password" placeholder="Password" required id="password" onChange={handleChange}></input>
+                            <input
+                            type="password"
+                            placeholder="Password"
+                            required
+                            id="password"
+                            onChange={handleChange}
+                            data-testid="password-input"
+                            ></input>
                             </FormGroup>
 
                             <button className="btn secondary_btn auth__btn" type="submit">Login</button>
