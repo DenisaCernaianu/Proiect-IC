@@ -29,5 +29,11 @@
     "mocha": "^10.2.0",
     "sinon": "^15.1.0",
     "supertest": "^6.3.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
+  
 }

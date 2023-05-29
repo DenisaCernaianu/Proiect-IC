@@ -1,9 +1,8 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react-hooks'; // Update the import statement
+import { render, screen, fireEvent, waitFor } from '@testing-library/react-hooks'; 
 import { MemoryRouter, Router } from 'react-router-dom';
-import Login from './Login.jsx';
+import Login from '../pages/Login.jsx';
 
-// Rest of the code...
 
 describe('Login component', () => {
   test('renders login form', () => {
