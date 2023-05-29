@@ -7,7 +7,7 @@ import Tour from '../models/Tour.js';
 describe('API Endpoint Testing', function () {
   it('should delete a user', function (done) {
     this.timeout(50000)
-    const user = new User({ username: 'John Doe2', email: 'john2@example.com', password: 'john' });
+    const user = new User({ username: 'John Doe222', email: 'john22@example.com', password: 'joh1n' });
 
     user.save().then(() => {
       request(app)
@@ -27,10 +27,10 @@ describe('API Endpoint Testing', function () {
   });
   it('should update a user', function (done) {
     this.timeout(50000)
-    const user = new User({ username: 'John Doe8563e345y4tr876573588', email: 'john78658e34456776r78@example.com', password: 'john' });
+    const user = new User({ username: 'John111 Doe8563e345y4tr876573588', email: 'john711118658e34456776r78@example.com', password: 'john' });
 
     user.save().then(() => {
-      const updatedUser = { username: 'Updated7 34354r6e6765User', email: 'upda7456t7634re56ed@example.com', password: 'updated' };
+      const updatedUser = { username: 'Upda1111ted7 34354r6e6765User', email: 'upda7456t71111634re56ed@example.com', password: 'updated' };
       request(app)
         .put(`/api/v1/users/${user._id}`)
         .send(updatedUser)
@@ -54,23 +54,23 @@ describe('API Endpoint Testing', function () {
     this.timeout(50000)
     // Create a tour to update
     const newTour = new Tour({
-      title: 'Tour34 433A25w3',
-      city: 'A23w343453',
-      address: 'Alba3ni3344a25w3',
-      distance: 90230,
-      desc: 'A wond2e34rfu4l t3our',
-      price: 1200,
+      title: 'Tour314 433A25w3',
+      city: 'A23w343111453',
+      address: 'Alba13ni3344a25w3',
+      distance: 902310,
+      desc: 'A wond21e34rfu4l t3our',
+      price: 12010,
       maxGroupSize: 92
     });
     const savedTour = await newTour.save();
 
     // Update the tour
     const updatedData = {
-      title: 'Updated334 Touw34r A235',
-      city: 'Updated33 Ci4tyw53423',
-      address: 'Updat33ed Add434wre2s5s3',
+      title: 'Updat111ed334 Touw34r A235',
+      city: 'Updated133 Ci4tyw53423',
+      address: 'Upda11t33ed Add434wre2s5s3',
       distance: 12000,
-      desc: 'Updated23 descr3iption',
+      desc: 'Updated213 descr3iption',
       price: 200,
       maxGroupSize: 10
     };
@@ -93,11 +93,11 @@ describe('API Endpoint Testing', function () {
 
   it('should create a new tour', async function () {
     const newTour = {
-      title: 'Tour 33443Aff',
-      city: 'Afff33434',
-      address: 'Alba33344niaff',
+      title: 'Tour 331443Aff',
+      city: 'Afff334134',
+      address: 'Alba331344niaff',
       distance: 900,
-      desc: 'A wonderf3ul tour',
+      desc: 'A wonder1f3ul tour',
       price: 100,
       maxGroupSize: 9
     };
@@ -120,9 +120,9 @@ describe('API Endpoint Testing', function () {
 
   it('should create a new user', async function () {
     const newUser = {
-      username: 'test344user',
-      email: 'testuser443@example.com',
-      password: 'testpassword'
+      username: 'test3441user',
+      email: 'testuser443@1example.com',
+      password: 'testpass1word'
     };
 
     const res = await request(app)
