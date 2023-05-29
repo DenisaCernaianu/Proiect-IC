@@ -48,3 +48,5 @@ app.listen(port, ()=>{
     connect();
     console.log('server listening on port', port);
 });
+
+export default app;
